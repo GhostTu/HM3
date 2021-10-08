@@ -1,0 +1,29 @@
+/*Задача
+16. Да се дефинира константата Пи (3.14159...) и да се напише
+функция , която изчислява лицето на окръжност по даден радиус Пи * R * R).
+В main() да се извика горната функция с радиуси 1, 1.5, 13.*/
+
+#include <stdio.h>
+#include <math.h>
+
+
+
+float area_circle (float radius)
+{
+    const float PI=3.14159;
+    float area = 0;
+    area = PI*radius*radius;
+    return area;
+}
+
+int main()
+{
+    printf("Area of a circle is: %.6f\n", area_circle(1));
+    printf("Area of a circle is: %.6f\n",  area_circle(1.5));
+    printf("Area of a circle is: %.6f\n", area_circle(13));
+
+    return 0;
+}
+
+
+
