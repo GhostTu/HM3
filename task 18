@@ -1,0 +1,77 @@
+/*Задача
+18 Довършете задачата за кемперите от миналия път като добавите
+променлива , в която да се събират парите , които клиентът дължи на компанията .
+Принтирайте резултата . Питайте клиента дали иска още налични продукти*/
+
+#include <stdio.h>
+
+int main()
+{
+    int cemp = 0, carav = 0, pricePerCarav = 90, pricePerCemp = 100, choice = 0, day =0, avalCemp = 3, avalCarav = 3;
+    float moneycemp = 0.0, totalMoney = 0.0 , moneycarav = 0.0;
+
+        int choiceNum = 0;
+        char cont ='y' ;// continue;
+
+        do {
+        printf("What do you prefer: 1-Cemper or 2-Caravan\n");
+        avalCemp-=cemp;
+        avalCarav-=carav;
+        printf("Avaliable Cemper = %d\nAvailale Caravan = %d\n", avalCemp, avalCarav);
+        scanf("%d", &choice); 
+
+    if (choice == 1)
+    {
+        printf("How many cempers do you want to book?\n");
+       
+    
+    do {
+         scanf("%d", &cemp);
+    if (cemp == 1 || cemp == 2 || cemp == 3)
+    {
+        printf("How many days do you want to stay:\n");
+        scanf("%d", &day);
+        moneycemp=cemp*day*pricePerCemp;
+        printf("You have to pay %.2f BGN\n", moneycemp );
+        break;
+        
+    }else {
+        printf("There are only %d please choose again.\n", avalCemp);
+        printf("How many cempers do you want to book?\n");
+
+    }
+
+    } while(avalCemp == 0 );
+}
+    if (choice == 2)
+    {
+        printf("How many Caravans do you want to book?\n");
+       
+    do {
+         scanf("%d", &carav);
+    if (carav == 1 || carav == 2 || carav == 3)
+    {
+        printf("How may days do you want to stay:\n");
+        scanf("%d", &day);
+        moneycarav=carav*day*pricePerCemp;
+        printf("You have to pay %.2f BGN\n", moneycarav );
+        break;
+    }else {
+        printf("There are only %d please choose again.\n", avalCarav);
+        printf("How many caravans do you want to book?\n");
+
+    }
+
+    } while(avalCarav == 0 );
+
+    } //END IF
+
+       printf("Do you want to continue? [y/n]: \n");
+       scanf("%s", &cont);
+
+    }while(cont == 'n');
+        totalMoney = moneycarav + moneycemp;
+        printf("Total money you have to pay are: %fBGN \n", totalMoney);
+    
+    return 0;
+}
