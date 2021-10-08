@@ -1,0 +1,16 @@
+#include <stdio.h>
+/*Задача 6. Запишете в четири последователни байтове в паметта със
+стойност 0xAA(10101010) и разпечатайте съдържанието на горните байтове,
+ако типът е: float, signed int, unsigned int*/
+
+int main()
+{
+char hex[]={0xAA, 0xAA, 0xAA, 0xAA, '\0'};
+//unsigned int a =0xAAАААААА;
+printf("%x\n", hex);
+printf("%ui\n", hex);
+printf("%f\n", hex);
+printf("%d\n", hex);
+
+return 0;
+}
