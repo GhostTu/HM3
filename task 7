@@ -1,0 +1,14 @@
+/*Задача 7. Запишете в осем последователни байта в паметта със
+стойност 0xBB(1011 1011) и разпечатайте съдържанието на
+горните байтове, ако типът е: double, signed long long, unsigned
+long long*/
+
+#include <stdio.h>
+
+int main(){
+    char str[] = {0xBB, 0xBB, 0xBB, 0xBB, 0xBB, 0xBB, 0xBB, 0xBB, '\0'};
+    printf("Double 0xBB is %f\n ", str);
+    printf("signed long long 0xBB is %lli\n", str);
+    printf("unsigned long long 0xBB is %llu\n", str);
+    return 0;
+}
